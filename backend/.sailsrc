@@ -1,0 +1,14 @@
+{
+  "generators": {
+    "modules": {}
+  },
+  "hooks": {
+    "grunt": false,
+	"orm": false,
+	"pubsub": false,
+	"blueprints": false
+  },
+  "paths": {
+    "public": "assets"
+  }
+}
