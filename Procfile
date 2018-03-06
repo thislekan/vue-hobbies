@@ -1,1 +1,1 @@
-web: pm2 start backend/app.js
+web: pm2 start backend/app.js -x -- --prod
