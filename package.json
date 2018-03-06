@@ -4,7 +4,7 @@
   "description": "A Vue.js and Sails.js App",
   "main": "backend/app.js",
   "scripts": {
-    "start": "node ./node_modules/.bin/pm2-runtime backend/app.js -i max",
+    "start": "cd frontend npm run build && cd ../backend node ./node_modules/.bin/pm2-runtime backend/app.js -i max",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
