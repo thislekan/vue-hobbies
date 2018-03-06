@@ -22,7 +22,7 @@
 	},
 	"scripts": {
 		"debug": "node debug app.js",
-		"start": "node ./node_modules/.bin/pm2-runtime app.js -i max"
+		"start": "node app.js"
 	},
 	"main": "app.js",
 	"repository": {
