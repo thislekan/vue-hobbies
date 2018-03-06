@@ -1,1 +1,1 @@
-web: node backend/app.js
+web: pm2 start backend/app.js
