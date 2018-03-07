@@ -11,22 +11,10 @@ const { User } = require("./../models/User");
 const AWS = require('aws-sdk');
 
 const twilio = require('twilio');
-if (process.env === 'development') {
-	const client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
-	AWS.config.loadFromPath('../config/config.json');
-}
 
-
-// AWS.Service = new AWS.ConfigService({ secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY, accessKeyId: process.env.AWS_ACCESS_KEY_ID });
-
-if (process.env === 'production') {
-	console.log('production confirmed');
-	const client = new twilio({
-		username: process.env.TWILIO_ACCOUNT_SID,
-		password: process.env.TWILIO_AUTH_TOKEN
-	});
-	AWS.config({ accessKeyId: process.env.AWS_ACCESS_KEY_ID, secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY, region: process.env.AWS_REGION })
-}
+console.log(process.env.NODE_ENV + 'confirmed');
+const client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+AWS.config = new AWS.Config({ accessKeyId: process.env.AWS_ACCESS_KEY_ID, secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY, region: process.env.AWS_REGION })
 
 const ses = new AWS.SES({ apiVersion: '2010-12-01' });
 

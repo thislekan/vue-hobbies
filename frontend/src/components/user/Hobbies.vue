@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<h1>Hello {{user}}</h1>
+		<h1 class="text-center">Hello {{user}}</h1>
 		<br><br>
 		<div class="row">
 			<div class="col-xs-12 col-sm-5 col-lg-4" id="box1">

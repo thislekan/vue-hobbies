@@ -61,7 +61,7 @@ module.exports.connections = {
 	localMongoDb: {
 		adapter: 'sails-mongo',
 		database: 'Hobbies', //optional
-		url: process.env.NODE_ENV
+		url: process.env.MONGODB_URI
 	},
 
 	/***************************************************************************
